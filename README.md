@@ -3,6 +3,10 @@
 A personal expense tracker that runs only on your computer. No cloud, no login, no external services.
 Your data is one SQLite file: `backend\data\paisa.db`.
 
+**Try it without installing:** a live demo with made-up sample data runs at
+<https://virajvaidya0504-sys.github.io/Paisa/>. It runs the real Python backend inside your browser, so it takes
+a few seconds to start, nothing is uploaded, and changes reset when you refresh.
+
 **Stack:** Python + FastAPI + SQLite (backend), React + Vite + Recharts (frontend).
 The server listens on `127.0.0.1` only, so nothing on your network can reach it.
 
@@ -105,6 +109,11 @@ Paisa\
 │  └─ data\paisa.db        your data (created on first run)
 └─ frontend\src\           React app: pages\, components\, theme, formatting (₹ lakh/crore)
 ```
+
+## Publishing the demo
+
+The demo is the same app with its backend running in the browser (Pyodide). After changing the app, run
+`powershell -ExecutionPolicy Bypass -File .\publish-demo.ps1` to rebuild it and update the GitHub Pages site.
 
 ## Back up your data
 

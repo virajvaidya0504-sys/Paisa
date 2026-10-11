@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import Icon from "./components/Icon";
 import { Modal } from "./components/Common";
+import { DEMO } from "./api";
 import { useApi } from "./hooks";
 import { useTheme } from "./theme";
 import Budgets from "./pages/Budgets";
@@ -83,6 +84,12 @@ export default function App() {
         </nav>
 
         <main className="main">
+          {DEMO && (
+            <div className="demo-banner" role="note">
+              <b>Live demo</b> with made-up sample data, running entirely in your browser. Changes reset when you refresh.
+              <a href="https://github.com/virajvaidya0504-sys/Paisa" target="_blank" rel="noreferrer">Get the real app</a>
+            </div>
+          )}
           <div className="page" key={pathname}>
             <Routes>
               <Route path="/" element={<Dashboard />} />

@@ -46,7 +46,7 @@ export default function Transactions() {
   return (
     <div className="stack">
       <PageHead eyebrow="Ledger" title="Transactions">
-        <a className="btn" href={api.exportUrl(params)} download><Icon name="download" size={17} /> Export CSV</a>
+        <a className="btn" href={api.exportUrl(params)} download onClick={api.exportClick(params)}><Icon name="download" size={17} /> Export CSV</a>
         <Link className="btn primary" to="/add"><Icon name="plus" size={17} /> Add</Link>
       </PageHead>
       <FilterBar value={filters} onChange={changeFilters} tags={tags.data ?? []} />

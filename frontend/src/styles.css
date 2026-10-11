@@ -268,3 +268,9 @@ td.r, th.r { text-align: right; }
 }
 
 .chip.sm { padding: 5px 11px; font-size: 0.8125rem; }
+
+/* ---------- demo banner ---------- */
+.demo-banner { max-width: 1120px; margin: 0 auto 18px; padding: 10px 14px; border-radius: var(--r-md); font-size: 0.8125rem; color: var(--dim);
+  background: var(--gold-soft); border: 1px solid color-mix(in srgb, var(--gold) 30%, transparent); display: flex; gap: 6px 12px; flex-wrap: wrap; align-items: center; }
+.demo-banner b { color: var(--text); }
+.demo-banner a { color: var(--gold); margin-left: auto; text-decoration: none; font-weight: 500; }
